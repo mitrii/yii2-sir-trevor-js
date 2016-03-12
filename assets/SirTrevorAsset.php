@@ -28,6 +28,7 @@ class SirTrevorAsset extends AssetBundle {
         } else {
             $this->js[] = 'sir-trevor-js/build/sir-trevor.debug.js';
         }
+        $this->js[] = "custom-blocks/code.js";
 
         parent::registerAssetFiles($view);
     }
@@ -39,7 +40,6 @@ class SirTrevorAsset extends AssetBundle {
 
     public $js = [
         "es5-shim/es5-shim.js",
-        "custom-blocks/code.js"
     ];
 
     public $depends = [
