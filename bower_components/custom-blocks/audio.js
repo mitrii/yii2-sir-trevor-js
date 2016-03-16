@@ -1,7 +1,7 @@
-SirTrevor.Blocks.Code = SirTrevor.Block.extend({
+SirTrevor.Blocks.Audio = SirTrevor.Block.extend({
 
   type: "audio",
-  title: "Аудиофайл",
+  title: function() { return 'Аудиофайл'; },
 
   droppable: true,
   uploadable: true,
