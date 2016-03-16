@@ -29,6 +29,7 @@ class SirTrevorAsset extends AssetBundle {
             $this->js[] = 'sir-trevor-js/build/sir-trevor.debug.js';
         }
         $this->js[] = "custom-blocks/code.js";
+        $this->js[] = "custom-blocks/audio.js";
 
         parent::registerAssetFiles($view);
     }
