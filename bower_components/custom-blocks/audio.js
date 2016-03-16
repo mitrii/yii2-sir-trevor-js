@@ -6,7 +6,7 @@ SirTrevor.Blocks.Audio = SirTrevor.Block.extend({
     droppable: true,
     uploadable: true,
 
-    icon_name: 'file-music',
+    icon_name: '<i class="fa fa-pencil-square-o"></i>',
 
     loadData: function(data){
         // Create our image tag
