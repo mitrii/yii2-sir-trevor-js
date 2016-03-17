@@ -26,7 +26,7 @@ SirTrevor.Blocks.Audio = SirTrevor.Block.extend({
             urlAPI = (typeof URL !== "undefined") ? URL : (typeof webkitURL !== "undefined") ? webkitURL : null;
 
         // Handle one upload at a time
-        if (/image/.test(file.type)) {
+        if (/audio/.test(file.type)) {
             this.loading();
             // Show this image on here
             this.$inputs.hide();
