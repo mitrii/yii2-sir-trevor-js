@@ -10,7 +10,7 @@ SirTrevor.Blocks.Audio = SirTrevor.Block.extend({
 
     loadData: function(data){
         // Create our image tag
-        this.$editor.html($('<source>', { src: data.file.url, type: data.file.type }).appendTo('<audio controls></audio>'));
+        this.$editor.html($('<audio controls></audio>').append($('<source>', { src: data.file.url, type: data.file.type })));
     },
 
     onBlockRender: function(){
@@ -30,7 +30,7 @@ SirTrevor.Blocks.Audio = SirTrevor.Block.extend({
             this.loading();
             // Show this image on here
             this.$inputs.hide();
-            this.$editor.html($('<audio>', { src: urlAPI.createObjectURL(file) })).show();
+            this.$editor.html($('<audio controls></audio>').append($('<source>', { src: urlAPI.createObjectURL(file), type: file.type }))).show();
 
             this.uploader(
                 file,
