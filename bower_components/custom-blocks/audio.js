@@ -10,7 +10,7 @@ SirTrevor.Blocks.Audio = SirTrevor.Block.extend({
 
     loadData: function(data){
         // Create our image tag
-        this.$editor.html($('<audio>', { src: data.file.url }));
+        this.$editor.html($('<source>', { src: data.file.url, type: data.file.type }).appendTo('<audio controls></audio>'));
     },
 
     onBlockRender: function(){
