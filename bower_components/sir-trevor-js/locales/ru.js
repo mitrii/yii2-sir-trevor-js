@@ -26,7 +26,7 @@ SirTrevor.Locales.ru = {
         },
         quote: {
             'title': "Цитата",
-            'credit_field': "Автор"
+            'credit_field': "Подпись"
         },
         image: {
             'title': "Изображение",
