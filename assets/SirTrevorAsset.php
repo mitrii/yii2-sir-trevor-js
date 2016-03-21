@@ -19,15 +19,16 @@ class SirTrevorAsset extends AssetBundle {
     {
         $language = $this->language ? $this->language : Yii::$app->language;
 
+        if ($this->debug !== 'true') {
+            $this->js[] = 'sir-trevor-js/build/sir-trevor.min.js';
+        } else {
+            $this->js[] = 'sir-trevor-js/build/sir-trevor.debug.js';
+        }
+
         if ($language !== 'en') {
             $this->js[] = 'sir-trevor-js/locales/' . $language . '.js';
         }
 
-        if ($this->debug !== 'true') {
-            $this->js[] = 'sir-trevor-js/build/sir-trevor.debug.js';
-        } else {
-            $this->js[] = 'sir-trevor-js/build/sir-trevor.debug.js';
-        }
         $this->js[] = "custom-blocks/code.js";
         $this->js[] = "custom-blocks/audio.js";
 
